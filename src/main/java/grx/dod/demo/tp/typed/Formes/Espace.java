@@ -1,19 +1,18 @@
-package grx.dod.demo.tp;
+package grx.dod.demo.tp.typed.Formes;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Espace extends Rectangle {
 
-	Set<String> colors;
+	public Set<String> colors;
 	
 	public Espace(double x, double y, double width, double height, String ... colors) {
 		super(x, y, width, height, colors[0]);
 		
 		this.colors = new HashSet<>();
-		for (String color : colors) {
-			this.colors.add(color);
-		}
+		this.colors.addAll(Arrays.asList(colors));
 	}
 	
 	@Override

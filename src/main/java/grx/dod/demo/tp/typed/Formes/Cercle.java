@@ -1,11 +1,11 @@
-package grx.dod.demo.tp;
+package grx.dod.demo.tp.typed.Formes;
 
 public class Cercle extends Forme {
 
-	double x;
-	double y;
+	public double x;
+	public double y;
 	
-	double rayon;
+	public double rayon;
 	
 	public Cercle(double x, double y, double rayon, String color) {
 		super(CERCLE, color);

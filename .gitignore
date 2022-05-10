@@ -12,3 +12,4 @@ generated/*
 *.class
 *.prefs
 *.log
+.idea/

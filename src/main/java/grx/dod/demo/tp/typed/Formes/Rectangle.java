@@ -1,12 +1,12 @@
-package grx.dod.demo.tp;
+package grx.dod.demo.tp.typed.Formes;
 
 public class Rectangle extends Forme {
 
-	double x;
-	double y;
+	public double x;
+	public double y;
 	
-	double width;
-	double height;
+	public double width;
+	public double height;
 	
 	public Rectangle(double x, double y, double width, double height, String color) {
 		super(RECTANGLE, color);

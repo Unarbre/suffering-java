@@ -1,4 +1,6 @@
-package grx.dod.demo.tp;
+package grx.dod.demo.tp.typed.Manipulations;
+
+import grx.dod.demo.tp.typed.Formes.Forme;
 
 import java.util.List;
 import java.util.stream.Collectors;
