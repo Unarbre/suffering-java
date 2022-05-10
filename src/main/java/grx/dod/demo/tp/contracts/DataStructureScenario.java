@@ -1,13 +1,14 @@
 package grx.dod.demo.tp.contracts;
 
-import grx.dod.demo.tp.typed.Formes.Espace;
+import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 
-import java.util.List;
+public interface DataStructureScenario {
 
-public interface DataStructureScenario<Structure> {
     void tp1();
     void tp2();
     void tp3() throws Exception;
+
+    void print();
 
     Espace calculEspace();
     void draw();

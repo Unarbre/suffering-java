@@ -1,26 +1,25 @@
 package grx.dod.demo.tp.Infrastructure;
 
-import grx.dod.demo.tp.typed.Formes.Forme;
-import grx.dod.demo.tp.typed.Manipulations.Conversion;
+import grx.dod.demo.tp.contracts.Conversion;
 
 import java.util.concurrent.Callable;
 
-public class Tache implements Callable<Forme> {
+public class Tache<T> implements Callable<T> {
 
-    Forme forme;
-    Conversion conversion;
+    T forme;
+    Conversion<T> conversion;
 
-    public Tache(Forme forme) {
+    public Tache(T forme) {
         this.forme = forme;
     }
 
-    public Tache(Forme forme, Conversion conversion) {
+    public Tache(T forme, Conversion<T> conversion) {
         this.forme = forme;
         this.conversion = conversion;
     }
 
     @Override
-    public Forme call() {
+    public T call() {
         if (conversion != null) {
             // On applique la conversion
             return conversion.apply(forme);

@@ -4,33 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/FileParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Graphical/TypedDraw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Conversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Emission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/TypedPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="clarify ugliest code ever">
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/common/TypeFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Conversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Datatype.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Cercle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Cercle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Consommation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Conversion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Draw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Emission.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Espace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Espace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Filtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Filtre2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Forme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Forme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Generation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Pipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Cercle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Cercle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Espace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Espace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Forme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Forme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Graphical/TypedDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Emission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Emission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Mutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Pipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/TypedPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +41,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -68,13 +74,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="grx.dod.demo.tp.datastructures.generic" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="TP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="grx.dod.demo.tp.TP" />
       <module name="grx-dod-3-tp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="grx.dod.demo.tp.typed.Formes.Forme" />
+          <option name="PATTERN" value="grx.dod.demo.tp.datastructures.typed.Formes.Forme" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652176441284</updated>
-      <workItem from="1652176442734" duration="6271000" />
+      <workItem from="1652176442734" duration="9864000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1652177018382</created>
@@ -123,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652177748904</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clarify ugliest code ever">
+      <created>1652186410893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652186410893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +160,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="clarify ugliest code ever" />
+    <option name="LAST_COMMIT_MESSAGE" value="clarify ugliest code ever" />
   </component>
 </project>

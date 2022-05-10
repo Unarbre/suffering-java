@@ -1,9 +1,9 @@
-package grx.dod.demo.tp.typed;
+package grx.dod.demo.tp.datastructures.typed;
 
 import grx.dod.demo.tp.contracts.FileParser;
-import grx.dod.demo.tp.typed.Formes.Cercle;
-import grx.dod.demo.tp.typed.Formes.Forme;
-import grx.dod.demo.tp.typed.Formes.Rectangle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.typed.Formes;
+package grx.dod.demo.tp.datastructures.typed.Formes;
 
 public class Cercle extends Forme {
 

@@ -1,9 +1,9 @@
-package grx.dod.demo.tp.typed.Graphical;
+package grx.dod.demo.tp.datastructures.typed.Graphical;
 
-import grx.dod.demo.tp.typed.Formes.Cercle;
-import grx.dod.demo.tp.typed.Formes.Espace;
-import grx.dod.demo.tp.typed.Formes.Forme;
-import grx.dod.demo.tp.typed.Formes.Rectangle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
 import javax.swing.*;
 import java.awt.*;

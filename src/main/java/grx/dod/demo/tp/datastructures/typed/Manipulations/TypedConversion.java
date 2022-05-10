@@ -1,12 +1,11 @@
-package grx.dod.demo.tp.typed.Manipulations;
+package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.typed.Formes.Cercle;
-import grx.dod.demo.tp.typed.Formes.Forme;
-import grx.dod.demo.tp.typed.Formes.Rectangle;
+import grx.dod.demo.tp.contracts.Conversion;
+import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
-import java.util.function.Function;
-
-public class Conversion implements Function<Forme, Forme> {
+public class TypedConversion implements Conversion<Forme> {
 
     @Override
     public Rectangle apply(Forme forme) {

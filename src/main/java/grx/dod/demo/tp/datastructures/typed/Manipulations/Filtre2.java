@@ -1,6 +1,6 @@
-package grx.dod.demo.tp.typed.Manipulations;
+package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 
 import java.util.List;
 import java.util.stream.Collectors;

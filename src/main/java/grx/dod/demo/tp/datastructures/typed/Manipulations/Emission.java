@@ -1,8 +1,8 @@
-package grx.dod.demo.tp.typed.Manipulations;
+package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.typed.Formes.Espace;
-import grx.dod.demo.tp.typed.Formes.Forme;
-import grx.dod.demo.tp.typed.Formes.Rectangle;
+import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
 import java.util.*;
 
