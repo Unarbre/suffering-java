@@ -18,7 +18,7 @@ import java.util.Map;
 public class TypedDraw extends Drawer<Forme> {
 
 
-    public TypedDraw(List<Forme> formes, Espace espace) {
+    public TypedDraw(List<Forme> formes, Forme espace) {
         super(formes, espace);
     }
 
@@ -68,12 +68,13 @@ public class TypedDraw extends Drawer<Forme> {
         }
 
         if (espace != null) {
+            Espace sEspace = (Espace) espace;
             g2d.setColor(Color.BLACK);
             g2d.setStroke(stroke);
             g2d.draw(
                     new Rectangle2D.Double(
-                            zX + espace.x * unity, zY + espace.y * unity,
-                            espace.width * unity, espace.height * unity
+                            zX + sEspace.x * unity, zY + sEspace.y * unity,
+                            sEspace.width * unity, sEspace.height * unity
                     )
             );
         }

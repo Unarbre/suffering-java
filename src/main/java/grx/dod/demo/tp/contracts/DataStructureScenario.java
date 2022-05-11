@@ -2,7 +2,7 @@ package grx.dod.demo.tp.contracts;
 
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 
-public interface DataStructureScenario {
+public interface DataStructureScenario<T> {
 
     void tp1();
     void tp2();
@@ -10,6 +10,6 @@ public interface DataStructureScenario {
 
     void print();
 
-    Espace calculEspace();
+    T calculEspace();
     void draw();
 }

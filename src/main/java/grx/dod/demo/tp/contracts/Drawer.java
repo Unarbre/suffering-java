@@ -16,7 +16,7 @@ public abstract class Drawer<T> extends JPanel {
     protected static final Map<String, Color> colors;
 
     protected transient List<T> formes;
-    protected transient Espace espace;
+    protected transient T espace;
 
     protected transient BasicStroke stroke;
 
@@ -34,7 +34,7 @@ public abstract class Drawer<T> extends JPanel {
 
 
 
-    public Drawer(List<T> formes, Espace espace) {
+    public Drawer(List<T> formes, T espace) {
         this.formes = formes;
         this.espace = espace;
 

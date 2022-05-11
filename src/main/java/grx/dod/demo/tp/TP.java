@@ -7,7 +7,7 @@ public class TP {
 
 	
 	public static void main(String[] args) throws Exception {
-		TypedScenario scenario = new TypedScenario("src/main/resources/espace.txt");
+		GenericScenario scenario = new GenericScenario("src/main/resources/espace.txt");
 
 		scenario.tp1();
 

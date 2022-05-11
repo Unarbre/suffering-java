@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] Add generic tp3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" afterDir="false" />
+    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] Generify partial graphics">
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Graphical/GenericDrawer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/EspaceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/EspaceCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Pipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652176441284</updated>
-      <workItem from="1652176442734" duration="21796000" />
+      <workItem from="1652176442734" duration="23586000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1652177018382</created>
@@ -151,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652250973548</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[FEATURE] Generify partial graphics">
+      <created>1652257591373</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652257591373</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +174,8 @@
     <MESSAGE value="clarify ugliest code ever" />
     <MESSAGE value="[FEATURE] Add generic tp2" />
     <MESSAGE value="[FEATURE] Add generic tp3" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Add generic tp3" />
+    <MESSAGE value="[FEATURE] Generify partial graphics" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Generify partial graphics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
