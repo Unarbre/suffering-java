@@ -1,5 +1,6 @@
 package grx.dod.demo.tp.datastructures.generic;
 
+import grx.dod.demo.tp.Infrastructure.Tache;
 import grx.dod.demo.tp.contracts.DataStructureScenario;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
 import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericConversion;
@@ -7,11 +8,18 @@ import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericEspaceCalcula
 import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericFilter;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
+import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedConversion;
+import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedEspaceCalculator;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedFilter;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.Mutation;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class GenericScenario implements DataStructureScenario {
 
@@ -90,6 +98,33 @@ public class GenericScenario implements DataStructureScenario {
         printTpTitle(3);
 
         long start = startTimer();
+
+        GenericEspaceCalculator typedEspaceCalculator = new GenericEspaceCalculator();
+        GenericConversion genericConversion = new GenericConversion();
+        Tache<Datatype> mutation;
+
+        int nbCoeurs = 2;
+        ExecutorService processeur = Executors.newFixedThreadPool(nbCoeurs);
+
+        List<Future<Datatype>> taches = new ArrayList<>();
+        for (Datatype datatype : datatypes) {
+            if (datatype.type.equals("Rectangle")) {
+                mutation = new Tache<>(datatype);
+            } else {
+                mutation = new Tache<>(datatype, genericConversion);
+            }
+            taches.add(processeur.submit(mutation));
+        }
+
+        List<Datatype> espace = new ArrayList<>();
+        for (Future<Datatype> tache : taches) {
+            espace.add(tache.get());
+        }
+
+        processeur.shutdown();
+
+        this.printer.print(typedEspaceCalculator.output(espace));
+        printTimer(start);
     }
 
     @Override
