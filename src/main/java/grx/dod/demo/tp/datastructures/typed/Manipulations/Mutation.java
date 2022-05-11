@@ -1,28 +1,26 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+import grx.dod.demo.tp.contracts.Conversion;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Mutation implements Pipeline {
+public class Mutation<T> implements Pipeline<T> {
 
-	// Transforme : Cercle => Rectangle
-	
-	TypedConversion typedConversion;
-	
-	public Mutation(TypedConversion typedConversion) {
-		this.typedConversion = typedConversion;
-	}
-	
-	@Override
-	public List<Forme> output(List<Forme> input) {
-		if (typedConversion !=null) {
-			return input.stream().map(typedConversion)
-			.collect(Collectors.toList());
-		} else {
-			return input;
-		}
-	}
+    Conversion<T> conversion;
+
+    public Mutation(Conversion<T> conversion) {
+        this.conversion = conversion;
+    }
+
+    @Override
+    public List<T> output(List<T> input) {
+        if (conversion != null) {
+            return input.stream().map(conversion)
+                    .collect(Collectors.toList());
+        } else {
+            return input;
+        }
+    }
 
 }

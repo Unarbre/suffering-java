@@ -1,11 +1,9 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
-
 import java.util.List;
 
-public interface Pipeline {
+public interface Pipeline<T> {
 	
-	List<Forme> output(List<Forme> input);
+	List<T> output(List<T> input);
 
 }

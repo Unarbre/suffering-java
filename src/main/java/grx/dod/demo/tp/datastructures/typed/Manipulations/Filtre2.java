@@ -5,7 +5,7 @@ import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Filtre2 implements Pipeline {
+public class Filtre2 implements Pipeline<Forme> {
 
 	Class<? extends Forme> type;
 	

@@ -5,11 +5,11 @@ import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Filtre implements Pipeline {
+public class TypedFilter implements Pipeline<Forme> {
 
     String type;
 
-    public Filtre(String type) {
+    public TypedFilter(String type) {
         this.type = type;
     }
 
@@ -24,7 +24,7 @@ public class Filtre implements Pipeline {
     }
 
     public static List<Forme> output(String type, List<Forme> input) {
-        return (new Filtre(type)).output(input);
+        return (new TypedFilter(type)).output(input);
     }
 
 }

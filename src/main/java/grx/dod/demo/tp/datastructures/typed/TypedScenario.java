@@ -45,7 +45,7 @@ public class TypedScenario implements DataStructureScenario {
 
     void printTpTitle(int tpNumber) {
         System.out.println();
-        System.out.println("Espace, TP N°" + tpNumber + ":");
+        System.out.println("Espace, TP typé N°" + tpNumber + ":");
     }
 
 
@@ -54,7 +54,7 @@ public class TypedScenario implements DataStructureScenario {
         printTpTitle(1);
 
         long start = startTimer();
-        Emission espace = new Emission();
+        TypedEspaceCalculator espace = new TypedEspaceCalculator();
         List<Forme> rects = new ArrayList<>();
         TypedConversion typedConversion = new TypedConversion();
 
@@ -68,8 +68,7 @@ public class TypedScenario implements DataStructureScenario {
             }
         }
 
-        TypedPrinter affichage = new TypedPrinter();
-        affichage.print(espace.output(rects));
+        this.printer.print(espace.output(rects));
         printTimer(start);
     }
 
@@ -79,22 +78,18 @@ public class TypedScenario implements DataStructureScenario {
 
         long start = startTimer();
 
-        Emission emission = new Emission();
+        TypedEspaceCalculator typedEspaceCalculator = new TypedEspaceCalculator();
         TypedConversion typedConversion = new TypedConversion();
-        Mutation mutation = new Mutation(typedConversion);
+        Mutation<Forme> mutation = new Mutation<>(typedConversion);
 
-        List<Forme> s1;
-        List<Forme> s2;
-
-        s1 = emission.output(mutation.output(Filtre.output(Forme.CERCLE, formes)));
-        s2 = emission.output((Filtre.output(Forme.RECTANGLE, formes)));
+        List<Forme> s1 = typedEspaceCalculator.output(mutation.output(TypedFilter.output(Forme.CERCLE, formes)));
+        List<Forme> s2 = typedEspaceCalculator.output((TypedFilter.output(Forme.RECTANGLE, formes)));
 
         List<Forme> sN = new ArrayList<>();
         sN.addAll(s1);
         sN.addAll(s2);
 
-        TypedPrinter affichage = new TypedPrinter();
-        affichage.print(emission.output(sN));
+        this.printer.print(typedEspaceCalculator.output(sN));
 
         printTimer(start);
     }
@@ -106,7 +101,7 @@ public class TypedScenario implements DataStructureScenario {
 
         long start = startTimer();
 
-        Emission emission = new Emission();
+        TypedEspaceCalculator typedEspaceCalculator = new TypedEspaceCalculator();
         TypedConversion typedConversion = new TypedConversion();
         Tache<Forme> mutation;
 
@@ -132,8 +127,7 @@ public class TypedScenario implements DataStructureScenario {
 
         processeur.shutdown();
 
-        TypedPrinter affichage = new TypedPrinter();
-        affichage.print(emission.output(espace));
+        this.printer.print(typedEspaceCalculator.output(espace));
         printTimer(start);
     }
 
@@ -152,7 +146,7 @@ public class TypedScenario implements DataStructureScenario {
             }
         }
 
-        Emission espace = new Emission();
+        TypedEspaceCalculator espace = new TypedEspaceCalculator();
 
         return (Espace) espace.output(rects).get(0);
     }

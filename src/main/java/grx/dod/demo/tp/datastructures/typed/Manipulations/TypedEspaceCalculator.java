@@ -1,12 +1,13 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
+import grx.dod.demo.tp.contracts.EspaceCalculator;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
 import java.util.*;
 
-public class Emission implements Pipeline {
+public class TypedEspaceCalculator implements EspaceCalculator<Forme> {
 
     // Retourne le rectangle représentant l'espace
 
@@ -17,16 +18,8 @@ public class Emission implements Pipeline {
         List<Double> bottomX = new ArrayList<>();
         List<Double> bottomY = new ArrayList<>();
 
-        double minTopX;
-        double minTopY;
-        double maxBottomX;
-        double maxBottomY;
         Rectangle rectangle;
 
-        double x;
-        double y;
-        double width;
-        double height;
         Set<String> colors = new HashSet<>();
         Espace espace;
 
@@ -47,17 +40,16 @@ public class Emission implements Pipeline {
         }
 
         if (!topX.isEmpty() && !topY.isEmpty()) {
-            minTopX = topX.stream().min(Double::compareTo).get();
-            minTopY = topY.stream().min(Double::compareTo).get();
-            maxBottomX = bottomX.stream().max(Comparator.naturalOrder()).get();
-            maxBottomY = bottomY.stream().max(Comparator.naturalOrder()).get();
+            double minTopX = topX.stream().min(Double::compareTo).get();
+            double minTopY = topY.stream().min(Double::compareTo).get();
+            double maxBottomX = bottomX.stream().max(Comparator.naturalOrder()).get();
+            double maxBottomY = bottomY.stream().max(Comparator.naturalOrder()).get();
 
-            x = minTopX;
-            y = minTopY;
-            width = Math.abs(maxBottomX - minTopX);
-            height = Math.abs(maxBottomY - minTopY);
 
-            espace = new Espace(x, y, width, height, colors.toArray(new String[]{}));
+            double width = Math.abs(maxBottomX - minTopX);
+            double height = Math.abs(maxBottomY - minTopY);
+
+            espace = new Espace(minTopX, minTopY, width, height, colors.toArray(new String[]{}));
 
             return Collections.singletonList(espace);
         } else {

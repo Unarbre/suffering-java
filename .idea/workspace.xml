@@ -5,30 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="clarify ugliest code ever">
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/common/TypeFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Conversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Datatype.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/EspaceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericEspaceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Cercle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Cercle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Espace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Espace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Forme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Forme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Formes/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Formes/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Graphical/TypedDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedConversion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Emission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Emission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Filtre2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Pipeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/Manipulations/TypedPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Datatype.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Formes/Datatype.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Emission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedEspaceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Filtre2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Mutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/Pipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652176441284</updated>
-      <workItem from="1652176442734" duration="9864000" />
+      <workItem from="1652176442734" duration="18756000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1652177018382</created>
@@ -141,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652186410893</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="clarify ugliest code ever">
+      <created>1652191622294</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652191622294</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,5 +161,16 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="clarify ugliest code ever" />
     <option name="LAST_COMMIT_MESSAGE" value="clarify ugliest code ever" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedEspaceCalculator.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

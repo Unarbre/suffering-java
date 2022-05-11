@@ -1,6 +1,7 @@
 package grx.dod.demo.tp.datastructures.generic;
 
 import grx.dod.demo.tp.contracts.Printer;
+import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
 
 import java.util.List;
 
