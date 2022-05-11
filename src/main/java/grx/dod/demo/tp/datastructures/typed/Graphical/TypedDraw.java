@@ -1,5 +1,6 @@
 package grx.dod.demo.tp.datastructures.typed.Graphical;
 
+import grx.dod.demo.tp.contracts.Drawer;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
@@ -14,43 +15,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class TypedDraw extends JPanel {
+public class TypedDraw extends Drawer<Forme> {
 
-    private static final long serialVersionUID = -4436025711972915033L;
-
-    static final Map<String, Color> colors;
-
-    static {
-        colors = new HashMap<>();
-        colors.put("green", Color.GREEN);
-        colors.put("blue", Color.BLUE);
-        colors.put("red", Color.RED);
-        colors.put("black", Color.BLACK);
-        colors.put("magenta", Color.MAGENTA);
-        colors.put("pink", Color.PINK);
-        colors.put("yellow", Color.YELLOW);
-    }
-
-    transient List<Forme> formes;
-    transient Espace espace;
-
-    transient BasicStroke stroke;
 
     public TypedDraw(List<Forme> formes, Espace espace) {
-        this.formes = formes;
-        this.espace = espace;
-
-        this.setBackground(Color.WHITE);
-        this.setPreferredSize(new Dimension(500, 500));
-
-        this.stroke = new BasicStroke(
-                1,
-                BasicStroke.CAP_BUTT,
-                BasicStroke.JOIN_ROUND,
-                1.0f,
-                new float[]{2f, 0f, 2f},
-                2f
-        );
+        super(formes, espace);
     }
 
     @Override

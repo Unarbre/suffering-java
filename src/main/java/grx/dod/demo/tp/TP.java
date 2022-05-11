@@ -15,15 +15,15 @@ public class TP {
 
 		scenario.tp3();
 
-		GenericScenario scenario2 = new GenericScenario("src/main/resources/espace.txt");
+//		GenericScenario scenario2 = new GenericScenario("src/main/resources/espace.txt");
+//
+//		scenario2.tp1();
+//
+//		scenario2.tp2();
+//
+//		scenario.tp3();
 
-		scenario2.tp1();
-
-		scenario2.tp2();
-
-		scenario.tp3();
-
-//		scenario.draw();
+		scenario.draw();
 	}
 
 }

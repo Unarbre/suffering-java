@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.datastructures.generic;
+package grx.dod.demo.tp.datastructures.generic.Manipulations;
 
 import grx.dod.demo.tp.contracts.Printer;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;

@@ -1,8 +1,7 @@
 package grx.dod.demo.tp.datastructures.generic.Manipulations;
 
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
-import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
-import grx.dod.demo.tp.datastructures.typed.Manipulations.Pipeline;
+import grx.dod.demo.tp.contracts.Pipeline;
 
 import java.util.List;
 import java.util.stream.Collectors;

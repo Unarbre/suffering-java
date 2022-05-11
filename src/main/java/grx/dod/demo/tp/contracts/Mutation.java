@@ -1,6 +1,4 @@
-package grx.dod.demo.tp.datastructures.typed.Manipulations;
-
-import grx.dod.demo.tp.contracts.Conversion;
+package grx.dod.demo.tp.contracts;
 
 import java.util.List;
 import java.util.stream.Collectors;

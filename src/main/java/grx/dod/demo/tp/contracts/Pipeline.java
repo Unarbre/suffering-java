@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.datastructures.typed.Manipulations;
+package grx.dod.demo.tp.contracts;
 
 import java.util.List;
 
