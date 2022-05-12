@@ -1,6 +1,4 @@
-package grx.dod.demo.tp.contracts;
-
-import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
+package grx.dod.demo.tp.datastructures.contracts;
 
 public interface DataStructureScenario<T> {
 
@@ -11,5 +9,4 @@ public interface DataStructureScenario<T> {
     void print();
 
     T calculEspace();
-    void draw();
 }

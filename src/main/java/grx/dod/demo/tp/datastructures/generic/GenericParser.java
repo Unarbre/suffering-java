@@ -1,7 +1,6 @@
 package grx.dod.demo.tp.datastructures.generic;
 
-import grx.dod.demo.tp.common.TypeFactory;
-import grx.dod.demo.tp.contracts.FileParser;
+import grx.dod.demo.tp.datastructures.contracts.FileParser;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
 
 import java.io.BufferedReader;

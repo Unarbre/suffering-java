@@ -4,14 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] Generify partial graphics">
-      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Graphical/GenericDrawer.java" afterDir="false" />
+    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] graphical generic implemented">
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Drawer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/FormsParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Formes/SimplifiedForme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Graphical/FormsDisplayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Manipulations/SimplifiedConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Manipulations/SimplifiedEspaceCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Manipulations/SimplifiedFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/Manipulations/SimplifiedPrinter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/SimplifiedParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/SimplifiedScenario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/MainPanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/MainPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/components/RadioGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/components/fields/CircleFields.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/components/fields/NumberField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/components/fields/RectangleFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/Infrastructure/Tache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/TP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/common/TypeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/TypeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/Conversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/DataStructureScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/Drawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/EspaceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/EspaceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/Mutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Pipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/Pipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/contracts/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Graphical/GenericDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Graphical/GenericDrawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericEspaceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericEspaceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Graphical/TypedDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedConversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedConversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedEspaceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedEspaceCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/Manipulations/TypedPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +88,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="130" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -60,6 +96,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="grx.dod.demo.tp.datastructures.generic" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm" />
     </key>
   </component>
   <component name="RunManager">
@@ -101,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652176441284</updated>
-      <workItem from="1652176442734" duration="23586000" />
+      <workItem from="1652176442734" duration="50323000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1652177018382</created>
@@ -152,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652257591373</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[FEATURE] graphical generic implemented">
+      <created>1652259491008</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259491008</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +221,8 @@
     <MESSAGE value="[FEATURE] Add generic tp2" />
     <MESSAGE value="[FEATURE] Add generic tp3" />
     <MESSAGE value="[FEATURE] Generify partial graphics" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Generify partial graphics" />
+    <MESSAGE value="[FEATURE] graphical generic implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] graphical generic implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

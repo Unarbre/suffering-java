@@ -1,6 +1,6 @@
 package grx.dod.demo.tp.datastructures.generic.Manipulations;
 
-import grx.dod.demo.tp.contracts.Conversion;
+import grx.dod.demo.tp.datastructures.contracts.Conversion;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
 
 import java.util.HashMap;

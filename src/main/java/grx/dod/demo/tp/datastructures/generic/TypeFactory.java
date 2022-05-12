@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.common;
+package grx.dod.demo.tp.datastructures.generic;
 
 import java.util.Locale;
 

@@ -1,19 +1,16 @@
 package grx.dod.demo.tp.datastructures.typed.Graphical;
 
-import grx.dod.demo.tp.contracts.Drawer;
+import grx.dod.demo.tp.datastructures.contracts.Drawer;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
 
-import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class TypedDraw extends Drawer<Forme> {
 

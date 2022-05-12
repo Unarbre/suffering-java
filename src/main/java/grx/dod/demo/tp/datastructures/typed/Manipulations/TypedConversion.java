@@ -1,6 +1,6 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.contracts.Conversion;
+import grx.dod.demo.tp.datastructures.contracts.Conversion;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;

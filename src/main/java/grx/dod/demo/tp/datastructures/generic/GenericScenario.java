@@ -1,18 +1,14 @@
 package grx.dod.demo.tp.datastructures.generic;
 
 import grx.dod.demo.tp.Infrastructure.Tache;
-import grx.dod.demo.tp.contracts.DataStructureScenario;
+import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
+import grx.dod.demo.tp.datastructures.contracts.Mutation;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
 import grx.dod.demo.tp.datastructures.generic.Graphical.GenericDrawer;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.*;
-import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
-import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
-import grx.dod.demo.tp.contracts.Mutation;
-import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
-import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
-import grx.dod.demo.tp.datastructures.typed.Graphical.TypedDraw;
-import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedConversion;
-import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedEspaceCalculator;
+import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericConversion;
+import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericEspaceCalculator;
+import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericFilter;
+import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericPrinter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -147,7 +143,6 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
         return espace.output(rects).get(0);
     }
 
-    @Override
     public void draw() {
         JFrame window = new JFrame("Espace d'occupation des formes");
         window.setLayout(new BorderLayout());

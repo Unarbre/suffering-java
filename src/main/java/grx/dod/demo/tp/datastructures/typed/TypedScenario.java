@@ -1,8 +1,8 @@
 package grx.dod.demo.tp.datastructures.typed;
 
 import grx.dod.demo.tp.Infrastructure.Tache;
-import grx.dod.demo.tp.contracts.DataStructureScenario;
-import grx.dod.demo.tp.contracts.Mutation;
+import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
+import grx.dod.demo.tp.datastructures.contracts.Mutation;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
@@ -155,14 +155,11 @@ public class TypedScenario implements DataStructureScenario<Forme> {
         return (Espace) espace.output(rects).get(0);
     }
 
-
-    @Override
     public void draw() {
         JFrame window = new JFrame("Espace d'occupation des formes");
         window.setLayout(new BorderLayout());
         window.add(new TypedDraw(formes, calculEspace()), BorderLayout.CENTER);
         window.pack();
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLocationRelativeTo(null);
         window.setVisible(true);
     }

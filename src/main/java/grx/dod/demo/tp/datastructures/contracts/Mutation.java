@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.contracts;
+package grx.dod.demo.tp.datastructures.contracts;
 
 import java.util.List;
 import java.util.stream.Collectors;

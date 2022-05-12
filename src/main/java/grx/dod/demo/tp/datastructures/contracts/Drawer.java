@@ -1,7 +1,4 @@
-package grx.dod.demo.tp.contracts;
-
-import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
-import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
+package grx.dod.demo.tp.datastructures.contracts;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +10,7 @@ public abstract class Drawer<T> extends JPanel {
 
     private static final long serialVersionUID = -4436025711972915033L;
 
-    protected static final Map<String, Color> colors;
+    public static final Map<String, Color> colors;
 
     protected transient List<T> formes;
     protected transient T espace;

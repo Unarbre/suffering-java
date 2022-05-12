@@ -1,6 +1,6 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.contracts.Printer;
+import grx.dod.demo.tp.datastructures.contracts.Printer;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 
 import java.util.List;

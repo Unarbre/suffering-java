@@ -1,6 +1,6 @@
 package grx.dod.demo.tp.datastructures.typed.Manipulations;
 
-import grx.dod.demo.tp.contracts.EspaceCalculator;
+import grx.dod.demo.tp.datastructures.contracts.EspaceCalculator;
 import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;

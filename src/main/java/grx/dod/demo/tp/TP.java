@@ -1,29 +1,18 @@
 package grx.dod.demo.tp;
 
-import grx.dod.demo.tp.datastructures.generic.GenericScenario;
-import grx.dod.demo.tp.datastructures.typed.TypedScenario;
+import grx.dod.demo.tp.ihm.MainPanel;
+
+import javax.swing.*;
 
 public class TP {
 
 	
 	public static void main(String[] args) throws Exception {
-		GenericScenario scenario = new GenericScenario("src/main/resources/espace.txt");
-
-		scenario.tp1();
-
-		scenario.tp2();
-
-		scenario.tp3();
-
-//		GenericScenario scenario2 = new GenericScenario("src/main/resources/espace.txt");
-//
-//		scenario2.tp1();
-//
-//		scenario2.tp2();
-//
-//		scenario.tp3();
-
-		scenario.draw();
+		JFrame frame = new JFrame("Calcul d'espace");
+		frame.setContentPane(new MainPanel().panel1);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
 	}
 
 }

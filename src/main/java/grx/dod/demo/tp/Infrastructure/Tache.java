@@ -1,6 +1,6 @@
 package grx.dod.demo.tp.Infrastructure;
 
-import grx.dod.demo.tp.contracts.Conversion;
+import grx.dod.demo.tp.datastructures.contracts.Conversion;
 
 import java.util.concurrent.Callable;
 

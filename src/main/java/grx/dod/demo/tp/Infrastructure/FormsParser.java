@@ -1,4 +1,4 @@
-package grx.dod.demo.tp.datastructures.typed;
+package grx.dod.demo.tp.Infrastructure;
 
 import grx.dod.demo.tp.datastructures.contracts.FileParser;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TypedParser implements FileParser<Forme> {
+public class FormsParser implements FileParser<Forme> {
 
 
     public List<Forme> parse(String filePath) throws Exception {
