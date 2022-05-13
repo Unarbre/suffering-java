@@ -4,28 +4,23 @@ import grx.dod.demo.tp.Infrastructure.Tache;
 import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
 import grx.dod.demo.tp.datastructures.contracts.Mutation;
 import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
-import grx.dod.demo.tp.datastructures.generic.Graphical.GenericDrawer;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericConversion;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericEspaceCalculator;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericFilter;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericPrinter;
+import grx.dod.demo.tp.datastructures.generic.Manipulations.*;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
 public class GenericScenario implements DataStructureScenario<Datatype> {
 
     List<Datatype> datatypes;
     private final GenericPrinter printer = new GenericPrinter();
+    private final GenericFormeConverter converter = new GenericFormeConverter();
 
-    public GenericScenario(String filepath) throws Exception {
-        this.datatypes = new GenericParser().parse(filepath);
-    }
+    public GenericScenario() {}
 
     public long startTimer() {
         return System.currentTimeMillis();
@@ -52,7 +47,7 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
 
         GenericConversion convertor = new GenericConversion();
 
-        for (Datatype datatype: datatypes) {
+        for (Datatype datatype : datatypes) {
             if (datatype.type.equals("Rectangle")) rects.add(datatype);
             if (datatype.type.equals("Cercle")) rects.add(convertor.apply(datatype));
         }
@@ -119,37 +114,12 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
     }
 
     @Override
-    public void print() {
-        this.printer.print(this.datatypes);
+    public void loadFormes(List<Forme> loadedFormes) {
+        this.datatypes = loadedFormes.stream().map(converter::convert).collect(Collectors.toList());
     }
 
     @Override
-    public Datatype calculEspace() {
-        List<Datatype> rects = new ArrayList<>();
-        GenericConversion genericConversion = new GenericConversion();
-
-        for (Datatype forme : datatypes) {
-            if (forme.type.equals("Rectangle")) {
-                // Rien à faire
-                rects.add(forme);
-            } else if (forme.type.equals("Cercle")) {
-                // Conversion à faire
-                rects.add(genericConversion.apply(forme));
-            }
-        }
-
-        GenericEspaceCalculator espace = new GenericEspaceCalculator();
-
-        return espace.output(rects).get(0);
-    }
-
-    public void draw() {
-        JFrame window = new JFrame("Espace d'occupation des formes");
-        window.setLayout(new BorderLayout());
-        window.add(new GenericDrawer(datatypes, calculEspace()), BorderLayout.CENTER);
-        window.pack();
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setLocationRelativeTo(null);
-        window.setVisible(true);
+    public void print() {
+        this.printer.print(this.datatypes);
     }
 }

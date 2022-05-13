@@ -3,32 +3,23 @@ package grx.dod.demo.tp.datastructures.simplified;
 import grx.dod.demo.tp.Infrastructure.Tache;
 import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
 import grx.dod.demo.tp.datastructures.contracts.Mutation;
-import grx.dod.demo.tp.datastructures.generic.Formes.Datatype;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericConversion;
-import grx.dod.demo.tp.datastructures.generic.Manipulations.GenericEspaceCalculator;
 import grx.dod.demo.tp.datastructures.simplified.Formes.SimplifiedForme;
-import grx.dod.demo.tp.datastructures.simplified.Graphical.FormsDisplayer;
-import grx.dod.demo.tp.datastructures.simplified.Manipulations.SimplifiedConversion;
-import grx.dod.demo.tp.datastructures.simplified.Manipulations.SimplifiedEspaceCalculator;
-import grx.dod.demo.tp.datastructures.simplified.Manipulations.SimplifiedFilter;
-import grx.dod.demo.tp.datastructures.simplified.Manipulations.SimplifiedPrinter;
+import grx.dod.demo.tp.datastructures.simplified.Manipulations.*;
+import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
 public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme> {
 
     List<SimplifiedForme> formes;
     private final SimplifiedPrinter printer = new SimplifiedPrinter();
 
-    public SimplifiedScenario(String filepath) throws Exception {
-        this.formes = new SimplifiedParser().parse(filepath);
-    }
+    private final SimplifiedFormeConverter converter = new SimplifiedFormeConverter();
 
     public long startTimer() {
         return System.currentTimeMillis();
@@ -128,33 +119,9 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
         this.printer.print(this.formes);
     }
 
+
     @Override
-    public SimplifiedForme calculEspace() {
-        List<SimplifiedForme> rects = new ArrayList<>();
-        SimplifiedConversion genericConversion = new SimplifiedConversion();
-
-        for (SimplifiedForme forme : formes) {
-            if (forme.type.equals("Rectangle")) {
-                // Rien à faire
-                rects.add(forme);
-            } else if (forme.type.equals("Cercle")) {
-                // Conversion à faire
-                rects.add(genericConversion.apply(forme));
-            }
-        }
-
-        SimplifiedEspaceCalculator espace = new SimplifiedEspaceCalculator();
-
-        return espace.output(rects).get(0);
-    }
-
-    public void draw() {
-        JFrame window = new JFrame("Espace d'occupation des formes");
-        window.setLayout(new BorderLayout());
-        System.out.println(calculEspace());
-        window.add(new FormsDisplayer(formes, calculEspace()), BorderLayout.CENTER);
-        window.pack();
-        window.setLocationRelativeTo(null);
-        window.setVisible(true);
+    public void loadFormes(List<Forme> loadedFormes) {
+        this.formes = loadedFormes.stream().map(this.converter::convert).collect(Collectors.toList());
     }
 }

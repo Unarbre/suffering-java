@@ -4,17 +4,13 @@ import grx.dod.demo.tp.Infrastructure.Tache;
 import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
 import grx.dod.demo.tp.datastructures.contracts.Mutation;
 import grx.dod.demo.tp.datastructures.typed.Formes.Cercle;
-import grx.dod.demo.tp.datastructures.typed.Formes.Espace;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.Formes.Rectangle;
-import grx.dod.demo.tp.datastructures.typed.Graphical.TypedDraw;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedConversion;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedEspaceCalculator;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedFilter;
 import grx.dod.demo.tp.datastructures.typed.Manipulations.TypedPrinter;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -26,9 +22,7 @@ public class TypedScenario implements DataStructureScenario<Forme> {
     List<Forme> formes;
     private final TypedPrinter printer = new TypedPrinter();
 
-    public TypedScenario(String filePath) throws Exception {
-        TypedParser parser = new TypedParser();
-        this.formes = parser.parse(filePath);
+    public TypedScenario() throws Exception {
     }
 
     public long startTimer() {
@@ -136,32 +130,8 @@ public class TypedScenario implements DataStructureScenario<Forme> {
     }
 
     @Override
-    public Espace calculEspace() {
-        List<Forme> rects = new ArrayList<>();
-        TypedConversion typedConversion = new TypedConversion();
-
-        for (Forme forme : formes) {
-            if (forme instanceof Rectangle) {
-                // Rien à faire
-                rects.add(forme);
-            } else if (forme instanceof Cercle) {
-                // Conversion à faire
-                rects.add(typedConversion.apply(forme));
-            }
-        }
-
-        TypedEspaceCalculator espace = new TypedEspaceCalculator();
-
-        return (Espace) espace.output(rects).get(0);
-    }
-
-    public void draw() {
-        JFrame window = new JFrame("Espace d'occupation des formes");
-        window.setLayout(new BorderLayout());
-        window.add(new TypedDraw(formes, calculEspace()), BorderLayout.CENTER);
-        window.pack();
-        window.setLocationRelativeTo(null);
-        window.setVisible(true);
+    public void loadFormes(List<Forme> loadedFormes) {
+        this.formes = loadedFormes;
     }
 
 
