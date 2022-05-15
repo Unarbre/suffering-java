@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface DataStructureScenario<T> {
 
-    void tp1();
-    void tp2();
-    void tp3() throws Exception;
+    long tp1();
+    long tp2();
+    long tp3() throws Exception;
 
     void loadFormes(List<Forme> loadedFormes);
 

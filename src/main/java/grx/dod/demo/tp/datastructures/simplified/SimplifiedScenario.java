@@ -30,16 +30,15 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
         System.out.println("Espace, TP simplifié N°" + tpNumber + ":");
     }
 
-    private void printTimer(long start) {
+    private long getTime(long start) {
         long end = System.currentTimeMillis();
 
-        System.out.println(" => " + (end - start) + " (ms)");
+        return end - start;
     }
 
 
-
     @Override
-    public void tp1() {
+    public long tp1() {
         printTpTitle(1);
 
         long start = startTimer();
@@ -48,17 +47,17 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
 
         SimplifiedConversion convertor = new SimplifiedConversion();
 
-        for (SimplifiedForme forme: formes) {
+        for (SimplifiedForme forme : formes) {
             if (forme.type.equals("Rectangle")) rects.add(forme);
             if (forme.type.equals("Cercle")) rects.add(convertor.apply(forme));
         }
 
         this.printer.print(espace.output(rects));
-        printTimer(start);
+        return getTime(start);
     }
 
     @Override
-    public void tp2() {
+    public long tp2() {
         printTpTitle(2);
 
         long start = startTimer();
@@ -77,11 +76,11 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
 
         this.printer.print(simplifiedEspaceCalculator.output(sN));
 
-        printTimer(start);
+        return getTime(start);
     }
 
     @Override
-    public void tp3() throws Exception {
+    public long tp3() throws Exception {
         printTpTitle(3);
 
         long start = startTimer();
@@ -111,7 +110,7 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
         processeur.shutdown();
 
         this.printer.print(simplifiedEspaceCalculator.output(espace));
-        printTimer(start);
+        return getTime(start);
     }
 
     @Override

@@ -166,13 +166,46 @@ public class MainPanel {
     }
 
 
-    void run() {
-        DataStructureScenario scenario = this.getSelectedScenario();
+    void run()  {
+        DataStructureScenario<?> scenario = this.getSelectedScenario();
 
-        scenario.tp1();
+        try {
+            runTp(scenario);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    private DataStructureScenario getSelectedScenario() {
+    private void runTp(DataStructureScenario<?> scenario) throws Exception {
+        if (calculateSpaceRadioButton.isSelected()) {
+            long time = scenario.tp1();
+            displayCalculateSpaceTime(scenario, time);
+        }
+
+        if (calculatePipelineRadioButton.isSelected()) {
+            long time = scenario.tp2();
+            displayCalculatePipelineTime(scenario, time);
+        }
+
+        if (calculateMultithreadedRadioButton.isSelected()) {
+            long time = scenario.tp3();
+            displayCalculateMultithreadedTime(scenario, time);
+        }
+    }
+
+    private void displayCalculateMultithreadedTime(DataStructureScenario<?> scenario, long time) {
+
+    }
+
+    private void displayCalculatePipelineTime(DataStructureScenario<?> scenario, long time) {
+
+    }
+
+    private void displayCalculateSpaceTime(DataStructureScenario<?> scenario, long time) {
+
+    }
+
+    private DataStructureScenario<?> getSelectedScenario() {
         if (genericRadioButton.isSelected()){
             return genericScenario;
         }

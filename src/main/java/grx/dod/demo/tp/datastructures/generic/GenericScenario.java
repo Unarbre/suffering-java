@@ -31,14 +31,15 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
         System.out.println("Espace, TP générique N°" + tpNumber + ":");
     }
 
-    private void printTimer(long start) {
+    private long getTime(long start) {
         long end = System.currentTimeMillis();
 
         System.out.println(" => " + (end - start) + " (ms)");
+        return end - start;
     }
 
     @Override
-    public void tp1() {
+    public long tp1() {
         printTpTitle(1);
 
         long start = startTimer();
@@ -53,11 +54,12 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
         }
 
         this.printer.print(espace.output(rects));
-        printTimer(start);
+
+        return getTime(start);
     }
 
     @Override
-    public void tp2() {
+    public long tp2() {
         printTpTitle(2);
 
         long start = startTimer();
@@ -76,11 +78,11 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
 
         this.printer.print(genericEspaceCalculator.output(sN));
 
-        printTimer(start);
+        return getTime(start);
     }
 
     @Override
-    public void tp3() throws Exception {
+    public long tp3() throws Exception {
         printTpTitle(3);
 
         long start = startTimer();
@@ -110,7 +112,7 @@ public class GenericScenario implements DataStructureScenario<Datatype> {
         processeur.shutdown();
 
         this.printer.print(typedEspaceCalculator.output(espace));
-        printTimer(start);
+        return getTime(start);
     }
 
     @Override

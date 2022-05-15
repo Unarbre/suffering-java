@@ -29,10 +29,10 @@ public class TypedScenario implements DataStructureScenario<Forme> {
         return System.currentTimeMillis();
     }
 
-    public static void printTimer(long start) {
+    public long printTimer(long start) {
         long end = System.currentTimeMillis();
 
-        System.out.println(" => " + (end - start) + " (ms)");
+        return end - start;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class TypedScenario implements DataStructureScenario<Forme> {
 
 
     @Override
-    public void tp1() {
+    public long tp1() {
         printTpTitle(1);
 
         long start = startTimer();
@@ -67,11 +67,11 @@ public class TypedScenario implements DataStructureScenario<Forme> {
         }
 
         this.printer.print(espace.output(rects));
-        printTimer(start);
+        return printTimer(start);
     }
 
     @Override
-    public void tp2() {
+    public long tp2() {
         printTpTitle(2);
 
         long start = startTimer();
@@ -89,11 +89,11 @@ public class TypedScenario implements DataStructureScenario<Forme> {
 
         this.printer.print(typedEspaceCalculator.output(sN));
 
-        printTimer(start);
+        return printTimer(start);
     }
 
     @Override
-    public void tp3() throws Exception {
+    public long tp3() throws Exception {
 
         printTpTitle(3);
 
@@ -126,7 +126,7 @@ public class TypedScenario implements DataStructureScenario<Forme> {
         processeur.shutdown();
 
         this.printer.print(typedEspaceCalculator.output(espace));
-        printTimer(start);
+        return printTimer(start);
     }
 
     @Override

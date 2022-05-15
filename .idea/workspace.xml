@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] Add save forme to file">
+    <list default="true" id="39d6532a-7f55-4ae6-b818-4650b243dc29" name="Changes" comment="[FEATURE] Call the right scenario dependign of buttons + fix converter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Graphical/GenericDrawer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFormeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/Manipulations/GenericFormeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/DataStructureScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/contracts/DataStructureScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/generic/GenericScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/SimplifiedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/simplified/SimplifiedScenario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/datastructures/typed/TypedScenario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/grx/dod/demo/tp/ihm/MainPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652176441284</updated>
-      <workItem from="1652176442734" duration="55684000" />
+      <workItem from="1652176442734" duration="57187000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1652177018382</created>
@@ -176,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652459977081</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="[FEATURE] Call the right scenario dependign of buttons + fix converter">
+      <created>1652597915400</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1652597915400</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +210,8 @@
     <MESSAGE value="[FEATURE] graphical generic implemented" />
     <MESSAGE value="[FEATURE] Add forms to form list" />
     <MESSAGE value="[FEATURE] Add save forme to file" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Add save forme to file" />
+    <MESSAGE value="[FEATURE] Call the right scenario dependign of buttons + fix converter" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEATURE] Call the right scenario dependign of buttons + fix converter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
