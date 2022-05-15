@@ -93,7 +93,7 @@ public class TypedScenario implements DataStructureScenario<Forme> {
     }
 
     @Override
-    public long tp3() throws Exception {
+    public long tp3(int threadAmount) throws Exception {
 
         printTpTitle(3);
 
@@ -103,8 +103,7 @@ public class TypedScenario implements DataStructureScenario<Forme> {
         TypedConversion typedConversion = new TypedConversion();
         Tache<Forme> mutation;
 
-        int nbCoeurs = 2;
-        ExecutorService processeur = Executors.newFixedThreadPool(nbCoeurs);
+        ExecutorService processeur = Executors.newFixedThreadPool(threadAmount);
 
         List<Future<Forme>> taches = new ArrayList<>();
         for (Forme forme : formes) {

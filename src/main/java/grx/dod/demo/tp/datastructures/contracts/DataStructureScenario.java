@@ -8,7 +8,7 @@ public interface DataStructureScenario<T> {
 
     long tp1();
     long tp2();
-    long tp3() throws Exception;
+    long tp3(int threadAmount) throws Exception;
 
     void loadFormes(List<Forme> loadedFormes);
 

@@ -9,8 +9,10 @@ import grx.dod.demo.tp.datastructures.simplified.SimplifiedScenario;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
 import grx.dod.demo.tp.datastructures.typed.TypedScenario;
 import grx.dod.demo.tp.ihm.components.RadioGroup;
+import grx.dod.demo.tp.ihm.components.fields.AmountField;
 import grx.dod.demo.tp.ihm.components.fields.CircleFields;
 import grx.dod.demo.tp.ihm.components.fields.RectangleFields;
+import grx.dod.demo.tp.ihm.components.fields.TimeResultLabel;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,6 +23,8 @@ import java.util.Objects;
 
 public class MainPanel {
     public JPanel panel1;
+
+    private TimeResultLabel timeResultLabel;
 
     private JRadioButton typedRadioButton;
     private JRadioButton simplifiedRadioButton;
@@ -54,6 +58,10 @@ public class MainPanel {
     private JLabel rectangleAmount;
     private JLabel circleAmount;
     private JButton saveButton;
+    private JLabel timeLabel;
+    private JComboBox<Integer> threadAmount;
+    private JButton displayInterfaceButton;
+    private AmountField threadAmountField;
 
     private List<Forme> formes;
     private Drawer drawer = new Drawer();
@@ -72,7 +80,19 @@ public class MainPanel {
         this.loadFormes();
         this.setFormesAmountTexts();
         this.setupSaveButton();
+        this.setupTimelabel();
+        this.setupThreadAmount();
         display();
+    }
+
+    private void setupThreadAmount() {
+        this.threadAmountField = new AmountField(this.threadAmount, () -> {
+            if (this.calculateMultithreadedRadioButton.isSelected()) run();
+        });
+    }
+
+    private void setupTimelabel() {
+        this.timeResultLabel = new TimeResultLabel(timeLabel);
     }
 
     private void setupSaveButton() {
@@ -122,7 +142,8 @@ public class MainPanel {
     }
 
     private void setupRunButton() {
-        runButton.addActionListener(e -> display());
+        runButton.addActionListener(e -> this.run());
+        displayInterfaceButton.addActionListener(e -> this.display());
 
     }
 
@@ -166,7 +187,7 @@ public class MainPanel {
     }
 
 
-    void run()  {
+    void run() {
         DataStructureScenario<?> scenario = this.getSelectedScenario();
 
         try {
@@ -178,39 +199,25 @@ public class MainPanel {
 
     private void runTp(DataStructureScenario<?> scenario) throws Exception {
         if (calculateSpaceRadioButton.isSelected()) {
-            long time = scenario.tp1();
-            displayCalculateSpaceTime(scenario, time);
+            this.timeResultLabel.setTimeLabel(scenario, scenario.tp1(), "espace");
         }
 
         if (calculatePipelineRadioButton.isSelected()) {
-            long time = scenario.tp2();
-            displayCalculatePipelineTime(scenario, time);
+            this.timeResultLabel.setTimeLabel(scenario, scenario.tp2(), "pipeline");
         }
 
         if (calculateMultithreadedRadioButton.isSelected()) {
-            long time = scenario.tp3();
-            displayCalculateMultithreadedTime(scenario, time);
+            this.timeResultLabel.setTimeLabel(scenario, scenario.tp3(this.threadAmountField.getValue()), "thread");
+
         }
-    }
-
-    private void displayCalculateMultithreadedTime(DataStructureScenario<?> scenario, long time) {
-
-    }
-
-    private void displayCalculatePipelineTime(DataStructureScenario<?> scenario, long time) {
-
-    }
-
-    private void displayCalculateSpaceTime(DataStructureScenario<?> scenario, long time) {
-
     }
 
     private DataStructureScenario<?> getSelectedScenario() {
-        if (genericRadioButton.isSelected()){
+        if (genericRadioButton.isSelected()) {
             return genericScenario;
         }
 
-        if (simplifiedRadioButton.isSelected()){
+        if (simplifiedRadioButton.isSelected()) {
             return simplifiedScenario;
         }
 

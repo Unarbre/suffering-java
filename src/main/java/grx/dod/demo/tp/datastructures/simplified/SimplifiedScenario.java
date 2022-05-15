@@ -80,7 +80,7 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
     }
 
     @Override
-    public long tp3() throws Exception {
+    public long tp3(int threadAmount) throws Exception {
         printTpTitle(3);
 
         long start = startTimer();
@@ -89,8 +89,7 @@ public class SimplifiedScenario implements DataStructureScenario<SimplifiedForme
         SimplifiedConversion simplifiedConversion = new SimplifiedConversion();
         Tache<SimplifiedForme> mutation;
 
-        int nbCoeurs = 2;
-        ExecutorService processeur = Executors.newFixedThreadPool(nbCoeurs);
+        ExecutorService processeur = Executors.newFixedThreadPool(threadAmount);
 
         List<Future<SimplifiedForme>> taches = new ArrayList<>();
         for (SimplifiedForme forme : formes) {
