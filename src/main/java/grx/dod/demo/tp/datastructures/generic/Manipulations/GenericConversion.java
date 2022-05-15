@@ -9,10 +9,10 @@ public class GenericConversion implements Conversion<Datatype> {
     @Override
     public Datatype apply(Datatype datatype) {
         if (datatype.type.equals("Cercle")) {
-            Integer rayon =  datatype.getInteger("radius");
+            double rayon =  datatype.getDouble("radius");
             HashMap<String, Object> rectangle = new HashMap<>();
-            rectangle.put("x", datatype.getInteger("x") - rayon);
-            rectangle.put("y", datatype.getInteger("y") - rayon);
+            rectangle.put("x", datatype.getDouble("x") - rayon);
+            rectangle.put("y", datatype.getDouble("y") - rayon);
             rectangle.put("width", rayon * 2);
             rectangle.put("height", rayon * 2);
             rectangle.put("color", datatype.getString("color"));

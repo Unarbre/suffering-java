@@ -12,12 +12,15 @@ public class GenericFormeConverter implements FormeConverter<Datatype> {
     @Override
     public Datatype convert(Forme toConvert) {
         HashMap<String, Object> map = new HashMap<>();
+        String type = "";
         if (toConvert.type.equals(Forme.RECTANGLE)) {
             Rectangle r = (Rectangle) toConvert;
             map.put("x", r.x);
             map.put("y", r.y);
             map.put("width", r.width);
             map.put("height", r.height);
+            map.put("color", r.color);
+            type = "Rectangle";
         }
 
         if (toConvert.type.equals(Forme.CERCLE)) {
@@ -25,9 +28,11 @@ public class GenericFormeConverter implements FormeConverter<Datatype> {
             map.put("x", c.x);
             map.put("y", c.y);
             map.put("radius", c.rayon);
+            map.put("color", c.color);
+            type = "Cercle";
 
         }
 
-        return new Datatype(map, toConvert.type);
+        return new Datatype(map, type);
     }
 }

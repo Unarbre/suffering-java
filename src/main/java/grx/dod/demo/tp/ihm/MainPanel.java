@@ -3,6 +3,7 @@ package grx.dod.demo.tp.ihm;
 import grx.dod.demo.tp.Drawer;
 import grx.dod.demo.tp.Infrastructure.FormesWriter;
 import grx.dod.demo.tp.Infrastructure.FormsParser;
+import grx.dod.demo.tp.datastructures.contracts.DataStructureScenario;
 import grx.dod.demo.tp.datastructures.generic.GenericScenario;
 import grx.dod.demo.tp.datastructures.simplified.SimplifiedScenario;
 import grx.dod.demo.tp.datastructures.typed.Formes.Forme;
@@ -133,14 +134,14 @@ public class MainPanel {
                         genericRadioButton),
 
                 typedRadioButton,
-                this::display);
+                this::run);
 
         this.operationRadioGroup = new RadioGroup(
                 Arrays.asList(calculateSpaceRadioButton,
                         calculateMultithreadedRadioButton,
                         calculatePipelineRadioButton),
                 calculateSpaceRadioButton,
-                this::display
+                this::run
         );
     }
 
@@ -162,5 +163,24 @@ public class MainPanel {
             this.rectangleFields.reset();
             this.display();
         }
+    }
+
+
+    void run() {
+        DataStructureScenario scenario = this.getSelectedScenario();
+
+        scenario.tp1();
+    }
+
+    private DataStructureScenario getSelectedScenario() {
+        if (genericRadioButton.isSelected()){
+            return genericScenario;
+        }
+
+        if (simplifiedRadioButton.isSelected()){
+            return simplifiedScenario;
+        }
+
+        return typedScenario;
     }
 }
