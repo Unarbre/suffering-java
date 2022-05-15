@@ -5,16 +5,16 @@ import java.util.HashSet;
 public class SimplifiedForme {
 
     public String type;
-    public Double radius;
-    public Double x;
-    public Double y;
-    public Double height;
-    public Double width;
+    public double radius;
+    public double x;
+    public double y;
+    public double height;
+    public double width;
     public HashSet<String> colors;
     public String color;
 
 
-    private SimplifiedForme(String type, Double radius, String color, Double x, Double y) {
+    private SimplifiedForme(String type, double radius, String color, double x, double y) {
         this.type = type;
         this.radius = radius;
         this.color = color;
@@ -22,11 +22,11 @@ public class SimplifiedForme {
         this.y = y;
     }
 
-    public static SimplifiedForme createCercle(Double radius, String color, Double x, Double y) {
+    public static SimplifiedForme createCercle(double radius, String color, double x, double y) {
         return new SimplifiedForme("Cercle", radius, color, x, y);
     }
 
-    private SimplifiedForme(String type, String color, Double x, Double y, Double width, Double height) {
+    private SimplifiedForme(String type, String color, double x, double y, double width, double height) {
         this.type = type;
         this.color = color;
         this.x = x;
@@ -35,11 +35,11 @@ public class SimplifiedForme {
         this.height = height;
     }
 
-    public static SimplifiedForme creacteRectangle(String color, Double x, Double y, Double width, Double height) {
+    public static SimplifiedForme creacteRectangle(String color, double x, double y, double width, double height) {
         return new SimplifiedForme("Rectangle", color, x, y, width, height);
     }
 
-    private SimplifiedForme(String type, HashSet<String> colors, Double x, Double y, Double width, Double height) {
+    private SimplifiedForme(String type, HashSet<String> colors, double x, double y, double width, double height) {
         this.type = type;
         this.colors = colors;
         this.x = x;
@@ -48,7 +48,7 @@ public class SimplifiedForme {
         this.height = height;
     }
 
-    public static SimplifiedForme createEspace(HashSet<String> colors, Double x, Double y, Double width, Double height) {
+    public static SimplifiedForme createEspace(HashSet<String> colors, double x, double y, double width, double height) {
         return new SimplifiedForme("Espace", colors, x, y, width, height);
     }
 

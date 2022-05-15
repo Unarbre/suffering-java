@@ -18,10 +18,10 @@ public class SimplifiedEspaceCalculator implements EspaceCalculator<SimplifiedFo
 
         for (SimplifiedForme forme : input) {
             if (!forme.type.equals("Cercle")) {
-                Double x = forme.x;
-                Double y = forme.y;
-                Double width =  forme.width;
-                Double height = forme.height;
+                double x = forme.x;
+                double y = forme.y;
+                double width =  forme.width;
+                double height = forme.height;
 
                 topX.add(x);
                 topY.add(y);

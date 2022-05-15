@@ -18,10 +18,10 @@ public class GenericEspaceCalculator implements EspaceCalculator<Datatype> {
 
         for (Datatype datatype : datatypes) {
             if (!datatype.type.equals("Cercle")) {
-                Double x = datatype.getDouble("x");
-                Double y = datatype.getDouble("y");
-                Double width =  datatype.getDouble("width");
-                Double height = datatype.getDouble("height");
+                double x = datatype.getDouble("x");
+                double y = datatype.getDouble("y");
+                double width =  datatype.getDouble("width");
+                double height = datatype.getDouble("height");
 
                 topX.add(x);
                 topY.add(y);

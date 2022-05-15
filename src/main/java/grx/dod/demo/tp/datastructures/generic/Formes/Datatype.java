@@ -31,11 +31,11 @@ public class Datatype {
         return (HashSet<String>) this.map.get(key);
     }
 
-    public Integer getInteger(String key) {
+    public int getInteger(String key) {
         return Integer.parseInt(this.map.get(key).toString());
     }
 
-    public Double getDouble(String key) {
+    public double getDouble(String key) {
         return Double.parseDouble(this.map.get(key).toString());
     }
 
